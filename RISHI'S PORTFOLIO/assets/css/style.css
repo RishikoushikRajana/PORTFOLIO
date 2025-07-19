@@ -834,8 +834,63 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  
 }
 
+.duration {
+  display: inline;
+}
+
+/**
+ * bullet color 
+ */
+
+.timeline-text li::before {
+  content: "\2022";  /* Unicode for bullet point */
+  color: gold;       /* Change bullet color to gold */
+  font-weight: bold; /* If you want a bolder bullet */
+  display: inline-block;
+  width: 1em;        /* Also works with 1em */
+  margin-left: -1em; /* Adjust as needed */
+}
+
+.timeline-text li {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 1em;     /* Add some padding to align text */
+}
+
+/**
+ * experience image logo 
+ */
+
+/* .timeline-item {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-item-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  margin-right: 15px;
+  overflow: hidden;
+  border-radius: 8px; 
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-item-content {
+  flex: 1;
+} */
 
 /**
  * skills 
@@ -873,7 +928,6 @@ main {
   height: 100%;
   border-radius: inherit;
 }
-
 
 
 

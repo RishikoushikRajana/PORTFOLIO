@@ -723,7 +723,7 @@ main {
 
 
 /**
- * #skills
+ * #clients 
  */
 
 .clients { margin-bottom: 15px; }
@@ -750,11 +750,19 @@ main {
 
 .clients-item img {
   width: 100%;
-  filter: grayscale(1);
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.clients-item img:hover {
+  animation: zoom 2s ease-in-out infinite alternate;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
 
 
 

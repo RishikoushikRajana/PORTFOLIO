@@ -2,6 +2,8 @@
 # Rishi Koushik Rajana's Personal Portfolio
 This is a personal portfolio website for Rishi Koushik Rajana, a Web Developer from Vizag, India. The website serves as a comprehensive online resume and showcase of his skills, experience, and projects.
 
+# Live link [https://rishikoushikrajana.github.io/PORTFOLIO/]
+
 ## Table of Contents
 
 --Features

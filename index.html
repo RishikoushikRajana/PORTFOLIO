@@ -813,20 +813,22 @@
         <section class="contact-form">
 
           <h3 class="h3 form-title">Contact Form</h3>
-<form action="https://api.web3forms.com/submit" method="POST">
+<form action="#" class="form" data-form>
 
-   
-    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
-    <input type="text" name="name" required>
-    <input type="email" name="email" required>
-    <textarea name="message" required></textarea>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
 
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-    <button type="submit">Submit Form</button>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
 
-</form>
+          </form>
 
         </section>
 
@@ -859,46 +861,7 @@
 
 </form>
 
-<script>
-const form = document.getElementById('form');
-const result = document.getElementById('result');
-
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.innerHTML = "Please wait..."
-
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                result.innerHTML = "Form submitted successfully";
-            } else {
-                console.log(response);
-                result.innerHTML = json.message;
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-        })
-        .then(function() {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 3000);
-        });
-});
-</script>
+<script>"./RISHI'S PORTFOLIO/assets/js/script.js"</script>
 
   <!--
     - ionicon link
